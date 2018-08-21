@@ -1,0 +1,134 @@
+@charset "UTF-8";
+div {
+  box-sizing: border-box; }
+
+@font-face{
+  font-family: 'MyWebFont';
+  src: url('../fonts/Exo2.0-Thin.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'trebushet';
+  src: url('../fonts/trebushet.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/background.png");
+  background-repeat: repeat;
+  font-size: 16px; 
+  color: #fff;
+}
+.body-main__h1{
+  margin: 1rem auto;
+  text-align: center;
+  font-family: "MyWebFont", "Arial", sans-serif;
+}
+.wrapper-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.wrapper-content-item{
+  min-height: 400px;
+  min-width: 320px;
+  background: linear-gradient(-45deg, #1698d9 95%, transparent 95%);
+  border-radius: 0px 10px 10px 10px;
+  position: relative;
+  z-index: 0;
+  padding-top: 20px;
+}
+.wrapper-content-item:hover{
+  background: linear-gradient(-45deg, #d91667 95%, transparent 95%);
+}
+.wrapper-content-item:hover .wrapper-content-item-weight{
+  background: #d91667;
+}
+
+div[disabled]:hover{
+  background: linear-gradient(-45deg, #1698d9 95%, transparent 95%);
+}
+div[disabled]:hover .wrapper-content-item-weight{
+  background: #1698d9;
+}
+.wrapper-content-item:after{
+  content: '';
+  background: linear-gradient(-45deg, #f2f2f2 95%, transparent 95%);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  border-radius: 0px 10px 10px 10px;
+  z-index: -1;
+}
+.wrapper-content-item__p-text-logo,
+.wrapper-content-item__h2,
+.wrapper-content-item__p-taste,
+.wrapper-content-item__p-amounts{
+  width: 70%;
+  margin: 1rem auto;
+  font-family: 'trebushet', sans-serif;
+  color: #666;
+}
+.wrapper-content-item__h2{
+  font-size: 3rem;
+  color: #000;
+}
+.wrapper-content-item__p-taste{
+  font-size: 1.5rem;
+  color: #000;
+}
+.wrapper-content-item__span{
+  display: block;
+}
+.wrapper-content-item-cat-face{
+  min-width: 270px;
+  min-height: 300px;
+  background: url('../img/catModel.png');
+  background-repeat: no-repeat;
+  position: relative;
+  bottom: 3px;
+  left: 3px;
+  border-radius: 0 0 0 10px;
+}
+.wrapper-content-item-weight{
+  font-family: 'trebushet', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #1698d9;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.wrapper-content-item-weight__span{
+  display: block;
+  font-size: 2rem;
+}
+.wrapper-content__p{
+  max-width: 320px;
+  text-align: center;
+  font-family: 'trebushet', sans-serif;
+  font-size: 0.8rem;
+}
+
+.checked-food{
+  background: linear-gradient(-45deg, #d91667 95%, transparent 95%);
+}
+.checked-food-weight{
+  background: #d91667;
+}
+.disabled-food{
+  filter: grayscale(0.9) brightness(1.2);
+}
